@@ -3,10 +3,11 @@ def line(array)
   if array.length == 0
     puts "The line is currently empty."
   else
-    array.each_with_index.map do |person, place|
-      "#{place}. #{person}"
+    line = []
+    array.each_with_index do |person, index|
+      line << "#{index}. #{person}"
     end
-    line = array.join(" ")
-    puts "The line is currently: " + line
+    new_line = line.join(" ")
+    puts "The line is currently: " + new_line
   end
 end
